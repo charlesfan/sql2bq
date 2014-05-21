@@ -1,0 +1,19 @@
+{
+  "name": "sql2bq",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "lazy": "~1.0.11",
+    "bigquery": "0.0.2",
+    "underscore": "~1.6.0",
+    "commander": "~2.2.0",
+		"mysql": "2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
