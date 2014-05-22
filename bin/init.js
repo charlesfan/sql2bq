@@ -47,6 +47,20 @@ function main(){
 	]
 
 	question.reverse();
+	console.log('');
+	console.log('=============================================================');
+	console.log('Welcome to use sql2bq');
+	console.log('=============================================================');
+	console.log('');
+	console.log('Beafore create init file, please apply service account first.');
+	console.log('Follow the doc: http://gappsnews.blogspot.tw/2013/10/connect-cloud-platform-bigquery-using.html');
+	console.log('');
+	console.log('=============================================================');
+	console.log('');
+	console.log('Start create the config of BQ and SQL DB.');
+	console.log('');
+	console.log('=============================================================');
+	console.log('');
 	ask(question, function(data){
 		var tmpFile = __dirname + '/../lib/config-example/cfg.js'
 			,	finFile = __dirname + '/../lib/config/cfg.js';
@@ -62,4 +76,12 @@ function main(){
 	});
 }
 
-main();
+fs.readdir(__dirname + '/../lib/config', function(err, file){
+	if(err && err.code === 'ENOENT'){
+		console.log('Create folder: lib/config');
+		fs.mkdir(__dirname + '/../lib/config', function(err, file){
+			if(err) console.log('[ERROR]lib/config create error: ',err);
+		});
+	}
+	main();
+});
