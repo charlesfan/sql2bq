@@ -45,7 +45,7 @@ You can just use sql command to query your data from SQL DB and upload to your b
 ```
 node bin/mysql.js -q 'select * from <db_table>' -t <bq_name>
 ```
-The operation: -q and -t are require when you use this sdk. We provide some operation in this sdk:
+The operation: -q and -t are require when you use this sdk. We provide some operations in this sdk:
 ```
 -p, --project <project>, Specify the BigQuery project
 
