@@ -37,10 +37,15 @@ Put your parament of your local SQL server and google project into this file, th
 ```
 node bin/init.js
 ```
-Check your config file and start use this apk.
+Check your config file and start use this sdk.
 
-### Query Operation
+### Do Query
 
+You can just use sql command to query your data from SQL DB and upload to your bq.
+```
+node bin/mysql.js -q 'select * from <db_table>' -t <bq_name>
+```
+The operation: -q and -t are require when you use this sdk. We provide some operation in this sdk:
 ```
 -p, --project <project>, Specify the BigQuery project
 
@@ -51,9 +56,3 @@ Check your config file and start use this apk.
 -t, --table <tablename>, Specify the table name(require)
 ```
 
-### Do Query
-
-You can just use sql command to query your data from SQL DB and upload to your bq.
-```
-node bin/mysql.js -q 'select * from <db_table>' -t <bq_name>
-```
