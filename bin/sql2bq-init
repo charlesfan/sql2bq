@@ -1,10 +1,10 @@
+#!/usr/bin/env node
 var fs = require('fs')
 var confset = require('../lib/tool').createConf
-	,	key = ["projectID",
+	,	key = [
+					"projectID",
 					"dataset",
-					"client_secret",
-					"privatekey_pem",
-					"key_pem",
+					"json_file",
 					"ipAddress",
 					"port",
 					"dbAccount",
@@ -34,11 +34,9 @@ function ask(question, format, fn){
 exports.main = main;
 function main(){
 	var question = [
-		"Your project ID",
+    "Your project ID",
 		"The name of BigQuery dataset",
-		"The PATH of client_secret",
-		"The PATH of privatekey_pem",
-		"The PATH of key_pem",
+		"The PATH of Service Account json file",
 		"Local DB\' IP address",
 		"Local DB\' port",
 		"DB User",
